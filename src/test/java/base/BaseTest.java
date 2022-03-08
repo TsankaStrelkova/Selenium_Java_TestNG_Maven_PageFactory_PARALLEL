@@ -21,7 +21,7 @@ public class BaseTest {
     private  WebDriver driver;
     public  Logger log = Logger.getLogger(BaseTest.class.getName());
     public  ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\excel\\testdata.xlsx");
-    //public  WebDriverWait wait;
+    public  WebDriverWait wait;
 
 
 
@@ -48,7 +48,7 @@ public class BaseTest {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait()));
-        //wait = new WebDriverWait(driver, FileReaderManager.getInstance().getConfigReader().getExplicitWait());
+        wait = new WebDriverWait(driver, FileReaderManager.getInstance().getConfigReader().getExplicitWait());
 
         threadLocalDriver.set(driver);
 

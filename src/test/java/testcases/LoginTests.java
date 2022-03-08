@@ -14,7 +14,7 @@ public class LoginTests extends BaseTest {
     {
       LoginPage lp = new LoginPage(getDriver());
       lp.clickOnNotLoggedUserButton();
-      //wait.until(ExpectedConditions.visibilityOf(lp.emailField));
+      wait.until(ExpectedConditions.visibilityOf(lp.emailField));
       lp.submitCredentials(userEmail,userPassword);
       Assert.assertTrue(lp.loggedUser.isDisplayed());
     }
