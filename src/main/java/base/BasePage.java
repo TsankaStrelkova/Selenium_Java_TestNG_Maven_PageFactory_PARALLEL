@@ -28,12 +28,12 @@ public class BasePage {
 
 
 
-    public static void scrollToTheBottomOfThePage(WebDriver driver) {
+    public static void scrollToTheBottomOfThePage() {
 
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
-    public void scrollToTheTopOfThePage(WebDriver driver) {
+    public void scrollToTheTopOfThePage() {
 
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 
